@@ -39,26 +39,35 @@ E. ```student.courseLoad[0]```
 
 ### 13. Arithmetic
 
-A. '3' + 2 will return string '32'. The + operator with a string and a number concatenates the two values as strings.
+A. ```'3' + 2``` will return string ```'32'```. The + operator with a string and a number concatenates the two values as strings.
 
-B. '3' - 2 will return number 1. The - operator with a string and a number will try to convert the string to a number before performing the subtraction.
+B. ```'3' - 2``` will return number ```1```. The - operator with a string and a number will try to convert the string to a number before performing the subtraction.
 
-C.  3 + null returns 3. null is treated as 0 in numeric, therefore 3 + null = 3 + 0, which is 3.
+C.  ```3 + null``` returns ```3```. null is treated as 0 in numeric, therefore 3 + null = 3 + 0, which is 3.
 
-D. '3' + null returns '3null'. The + operator with a string and null concatenates the two values as strings.
+D. ```'3' + null``` returns ```'3null'```. The + operator with a string and null concatenates the two values as strings.
 
-E. true + 3 returns 4.True is treated as 1 in numeric, so true + 3 = 1 + 3, which is 4.
+E. ```true + 3``` returns ```4```.True is treated as 1 in numeric, so true + 3 = 1 + 3, which is 4.
 
-F. false + null returns 0. False is treated as 0 in numerical so as null, therefore false + null = 0 + 0, which is 0.
+F. ```false + null``` returns ```0```. False is treated as 0 in numerical so as null, therefore false + null = 0 + 0, which is 0.
 
-G. '3' + undefined returns '3undefined'. The + operator with a string and undefined concatenates the two values as strings.
+G. ```'3' + undefined``` returns ```'3undefined'```. The + operator with a string and undefined concatenates the two values as strings.
 
-H. '3' - undefined returns NaN. the - operator tries to convert both value to numerical numbers before performing the subtraction. However, undefined cannot be converted to a number, therefore returns NaN(not a number).
+H. ```'3' - undefined``` returns ```NaN```. the - operator tries to convert both value to numerical numbers before performing the subtraction. However, undefined cannot be converted to a number, therefore returns NaN(not a number).
 
 ### 14. Comparison
-‘2’ > 1
-‘2’ < ‘12’
-2 == ‘2’
-2 === ‘2’
-true == 2
-true === Boolean(2)
+A.```‘2’ > 1``` returns ```true```. In JavaScript, when comparing a string to a number with the ```>``` operator, JavaScript will first converts the string to a number, therefore ```2 > 1``` is ```true```.
+
+B.```‘2’ < ‘12’``` returns ```true``` since comparing two strings with the ```<``` operator, JavaScript performs a character-by-character comparison of the strings.
+
+C.```2 == ‘2’``` returns ```true```. The ```==``` operator converts one operand to a type that matches the other operand before making the comparison. In this case, the string '2' can be converted to the number 2, so the expression becomes 2 == 2, which is true.
+
+D.```2 === ‘2’``` returns ```false```. The ```===``` operator checks if the operands have the same value and the same type. In this case, the type of ```2``` is number, and the type of ```'2'``` is string. Since the type is different, it returns false.
+
+E.```true == 2```returns ```false```. The ```==``` operator converted true to 1, therefore become ```1 == 2```, which is false.
+
+F.```true === Boolean(2)``` returns ```false```. Since the type of both operand is boolean and their value are all true, it will return ```true```.
+
+15. On one hand, the ```==``` operator is known as the loose equality operator or type coercion operator. It performs type coercion, as it tries to convert the operands to the same type before comparing them. After convert or the operant is alreay same type, == operator will performs a comparison based on operants values. 
+
+On the other hand, the ```===``` operator is known as the strict equality operator.It checks if the operands are of the same type and have the same value. If either is false, it will return false.
