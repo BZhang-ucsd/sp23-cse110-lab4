@@ -1,7 +1,64 @@
 # Part 2 Answer:
 
 1. Line 12 will print ```3``` since discounted has size of tree, i will be iterate and increment 3 times from 0;
-2. Line 13 will print ```150```, since the ```discountedPrice``` of the last value in ```discounted``` is 150. After the for loop, ```discountedPrice``` will be the most recent calculation.
+
+2. Line 13 will print ```150```, since the ```discountedPrice``` of the last value in ```discounted``` is 150. After the ```for``` loop, ```discountedPrice``` will be the most recent calculation.
+
 3. Line 14 will print ```150```, it will be the last value assigned to ```finalPrice``` afeer the for loop is completed. Therefore, it will be the last rounded value of "discountedPrice", which is also ```150```
-4. The function will return an array of discounted price, which will be ```[50, 100, 150]``` according to its input. This is because we are pushing the calculated discounted price and push it to the array call ```discounted```. Ater the 3 iteration of for loop, we will have 3 calculated values in the array ```discounted```, which is ```[50, 100, 150]``.
-5. 
+
+4. The function will return an array of discounted price, which will be ```[50, 100, 150]``` according to its input. This is because we are pushing the calculated discounted price it to the array call ```discounted```. Ater the 3 iteration of for loop, we will have 3 calculated values in the array ```discounted```, which is ```[50, 100, 150]``.
+
+5. It will causes error. ```let i``` declares ```i``` in its own scope. It can not be access outside the ```for``` loop, so when we excute line 12, ```i``` is not defined in its scope, therefore it causes error.
+
+6. It will causes error. ```let discountedPrice``` declares ```discountedPrice``` in its own scope. It can not be access outside the ```for``` loop, so when we excute line 13, ```discountedPrice``` is not defined in its scope, therefore it causes error.
+
+7. It will print "150". Eventhough ```finalPrice``` is declared using keyword ```let```, it is delcare in the whole function scope, it can be access anywhere in function ```discountedPrices```. Therefore it will return the last assigned value to ```finalPrice```, which is ```150``` due to the last input value ```300```.
+
+8. The function will return an array of discounted price, which will be ```[50, 100, 150]``` according to its input. This is because even though we have declare variable with keyword ```let```, ```discounted``` are still accessable in the whole function scope, and we are pushing the calculated discounted price to it. Ater the 3 iteration of for loop, we will have 3 calculated values in the array ```discounted```, which is ```[50, 100, 150]`` as return value.
+
+9. Line 11 will causes error. Since ```i``` was declared using ```let```, it can not be access outside of its scope.
+
+10. line 12 will print a ```3``` since ```length``` is a constant variable declared with value ```3```
+
+11. The function will return an array with value ```[50, 100, 150]``. Eventhough 'discountedPrice' is a 'const' valuable, it is fine to declare it again in the 'for' loop. So the return value should be same as previous functions.
+
+## Data Type
+
+12.
+A. ```student.name```
+
+B. ```student['Grad Year']```
+
+C. ```student.greeting()```
+
+D. ```student['Favorite Teacher'].name```
+
+E. ```student.courseLoad[0]```
+
+## Basic Operators & Type Conversion 
+
+### 13. Arithmetic
+
+A. '3' + 2 will return string '32'. The + operator with a string and a number concatenates the two values as strings.
+
+B. '3' - 2 will return number 1. The - operator with a string and a number will try to convert the string to a number before performing the subtraction.
+
+C.  3 + null returns 3. null is treated as 0 in numeric, therefore 3 + null = 3 + 0, which is 3.
+
+D. '3' + null returns '3null'. The + operator with a string and null concatenates the two values as strings.
+
+E. true + 3 returns 4.True is treated as 1 in numeric, so true + 3 = 1 + 3, which is 4.
+
+F. false + null returns 0. False is treated as 0 in numerical so as null, therefore false + null = 0 + 0, which is 0.
+
+G. '3' + undefined returns '3undefined'. The + operator with a string and undefined concatenates the two values as strings.
+
+H. '3' - undefined returns NaN. the - operator tries to convert both value to numerical numbers before performing the subtraction. However, undefined cannot be converted to a number, therefore returns NaN(not a number).
+
+### 14. Comparison
+‘2’ > 1
+‘2’ < ‘12’
+2 == ‘2’
+2 === ‘2’
+true == 2
+true === Boolean(2)
