@@ -37,7 +37,8 @@ E. ```student.courseLoad[0]```
 
 ## Basic Operators & Type Conversion 
 
-### 13. Arithmetic
+### Arithmetic
+13.
 
 A. ```'3' + 2``` will return string ```'32'```. The + operator with a string and a number concatenates the two values as strings.
 
@@ -55,7 +56,8 @@ G. ```'3' + undefined``` returns ```'3undefined'```. The + operator with a strin
 
 H. ```'3' - undefined``` returns ```NaN```. the - operator tries to convert both value to numerical numbers before performing the subtraction. However, undefined cannot be converted to a number, therefore returns NaN(not a number).
 
-### 14. Comparison
+### Comparison
+14. 
 A.```‘2’ > 1``` returns ```true```. In JavaScript, when comparing a string to a number with the ```>``` operator, JavaScript will first converts the string to a number, therefore ```2 > 1``` is ```true```.
 
 B.```‘2’ < ‘12’``` returns ```true``` since comparing two strings with the ```<``` operator, JavaScript performs a character-by-character comparison of the strings.
@@ -69,3 +71,12 @@ E.```true == 2```returns ```false```. The ```==``` operator converted true to 1,
 F.```true === Boolean(2)``` returns ```false```. Since the type of both operand is boolean and their value are all true, it will return ```true```.
 
 15. On one hand, the ```==``` operator is known as the loose equality operator or type coercion operator. It performs type coercion, as it tries to convert the operands to the same type before comparing them. After convert or the operant is alreay same type, == operator will performs a comparison based on operants values.  On the other hand, the ```===``` operator is known as the strict equality operator.It checks if the operands are of the same type and have the same value. If either is false, it will return false.
+
+
+### functions
+
+17. If the modifyArray function is called with ```modifyArray([1,2,3], doSomething)```, the result will be an array containing the values ```[2, 4, 6]```. Here is a walk through of it:
+- ```modifyArray function``` takes array ```[1,2,3]```and ```doSomething``` function as parameters. It creates an empty array newArr, and then loops through each element of the input array.
+- For each element in the input array, the code ```doSomething``` with that element as its argument. The result of the ```doSomething``` is then added to the newArr array using the push method.
+- Since ```doSomething``` returns the double the input value, each element in the input array will be doubled and pushed into newArr.
+- After all elements in the input array have been processed, the function returns the newArr array, which each element will be doubled corresponding to the input array, therefore, with ```[1,2,3]```, it will return ```[2, 4, 6]```
