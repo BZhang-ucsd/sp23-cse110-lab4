@@ -80,3 +80,12 @@ F.```true === Boolean(2)``` returns ```false```. Since the type of both operand 
 - For each element in the input array, the code ```doSomething``` with that element as its argument. The result of the ```doSomething``` is then added to the newArr array using the push method.
 - Since ```doSomething``` returns the double the input value, each element in the input array will be doubled and pushed into newArr.
 - After all elements in the input array have been processed, the function returns the newArr array, which each element will be doubled corresponding to the input array, therefore, with ```[1,2,3]```, it will return ```[2, 4, 6]```
+
+
+19. The output wil be :
+```
+1
+4
+3
+2
+```
