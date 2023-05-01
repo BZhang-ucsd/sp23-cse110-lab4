@@ -68,6 +68,4 @@ E.```true == 2```returns ```false```. The ```==``` operator converted true to 1,
 
 F.```true === Boolean(2)``` returns ```false```. Since the type of both operand is boolean and their value are all true, it will return ```true```.
 
-15. On one hand, the ```==``` operator is known as the loose equality operator or type coercion operator. It performs type coercion, as it tries to convert the operands to the same type before comparing them. After convert or the operant is alreay same type, == operator will performs a comparison based on operants values. 
-
-On the other hand, the ```===``` operator is known as the strict equality operator.It checks if the operands are of the same type and have the same value. If either is false, it will return false.
+15. On one hand, the ```==``` operator is known as the loose equality operator or type coercion operator. It performs type coercion, as it tries to convert the operands to the same type before comparing them. After convert or the operant is alreay same type, == operator will performs a comparison based on operants values.  On the other hand, the ```===``` operator is known as the strict equality operator.It checks if the operands are of the same type and have the same value. If either is false, it will return false.
